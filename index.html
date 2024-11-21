@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link href="./src/output.css" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="flex justify-center items-center h-svh bg-background-cyan">
+  <div class="flex flex-col lg:flex-row bg-white p-6 rounded-xl">
+    <div class="lg:pr-8">
+      <div>
+        <h3 class="text-sm pb-1">Bill</h3>
+        <input class="bill p-1 w-full bg-input-cyan bg-[url('/images/icon-dollar.svg')] text-right bg-no-repeat bg-[length:3%] bg-[position:8px_10px] pr-2 mb-8 placeholder:text-right focus:outline-gray-big-cyan type="text" placeholder="0">
+      </div>
+      <h3 class="text-base pb-3">Select Tip %</h3>
+      <div class="buttons grid grid-cols-3 gap-2 pb-6">
+        <button class="bg-dark-cyan text-white font-medium text-lg px-2 py-1 hover:text-dark-cyan hover:bg-background-cyan">5%</button>
+        <button class="bg-dark-cyan text-white font-medium text-lg px-2 hover:text-dark-cyan hover:bg-background-cyan">10%</button>
+        <button class="bg-dark-cyan text-white font-medium text-lg px-2 hover:text-dark-cyan hover:bg-background-cyan">15%</button>
+        <button class="bg-dark-cyan text-white font-medium text-lg px-2 py-1 hover:text-dark-cyan hover:bg-background-cyan">25%</button>
+        <button class="bg-dark-cyan text-white font-medium text-lg px-2 hover:text-dark-cyan hover:bg-background-cyan">50%</button>
+        <input class="bg-input-cyan placeholder:text-dark-cyan placeholder:text-center text-right font-bold text-lg px-2 max-w-24 focus:outline-gray-big-cyan" placeholder="Custom"></input>
+      </div>
+
+      <div class="flex gap-14">
+        <h3 class="text-sm pb-2">Number of People</h3>
+        <h3 class="error-number text-sm text-red-600 font-bold hidden">Can't be zero</h3>
+      </div>
+      <input class="number p-1 w-full bg-input-cyan bg-[url('/images/icon-person.svg')] text-right bg-no-repeat bg-[length:3%] bg-[position:8px_10px] pr-2 mb-8 placeholder:text-right focus:outline-gray-big-cyan type="text" placeholder="0">
+    </div>
+    <div class="bg-dark-cyan p-6 rounded-xl">
+      <div>
+        <div class="flex gap-20 pb-8">
+          <div>
+            <h3 class="text-sm text-white pr-2 pt-2">Tip Amount</h3>
+            <p class="text-xs text-gray-big-cyan">/ person</p>
+          </div>
+          <div>
+            <h2 class="tip text-4xl text-gray-cyan font-bold">$0.00</h2>
+          </div>
+        </div>
+        <div class="flex gap-28">
+          <div>
+            <h3 class="text-sm text-white pt-1">Total</h3>
+            <p class="text-xs pr-1 pb-28 text-gray-big-cyan">/ person</p>
+          </div>
+          <div>
+            <h2 class="total text-4xl text-gray-cyan font-bold">$0.00</h2>
+          </div>
+        </div>
+      </div>
+      <div>
+        <a href="">
+          <button class="w-full bg-dark-cyan2 py-1 text-dark-cyan3 font-bold hover:text-dark-cyan hover:bg-background-cyan">RESET</button>
+        </a>
+      </div>
+    </div>
+  </div>
+<script src="./script.js"></script>
+</body>
+</html>
