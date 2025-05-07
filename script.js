@@ -36,7 +36,7 @@ percentCustom.addEventListener("keyup", () => {
 
     if(number.value.length == 0){
         errorNumber.style.display = "flex"
-    }else if(number.value != "0"){
+    }else if(number.value.length > 0){
         errorNumber.style.display = "none"
         let totalPerPerson = wholeTip.toFixed(2) / number.value
         total.innerText = `$${totalPerPerson.toFixed(2)}`
